@@ -1,0 +1,77 @@
+body {
+	background: url("vaisseau.jpg"); /* Links to your background image, which you can also replace with a URL. */
+	background-size: cover; /* Image covers page. */
+	background-repeat: no-repeat; /* Image does not repeat. */
+	background-attachment: fixed; /* Image doesn't move when you scroll up or down. */
+	background-position: top;
+	text-align: center;
+	font-family: 'Avenir', sans-serif; /* Font: sans-serif included in case browser doesn't support first option. */
+}
+
+.container{
+  padding-top: 50px;
+  color =#FFF;
+}
+
+@font-face {
+    font-family: "Beauty and the Beast"; /* I used a custom font for my song title*/
+    src: url("Beauty and the Beast Sample.ttf") format("truetype"); /* you just have to include the .ttf file in the project and precise path*/
+}
+
+#thumbnail{
+  width: 100%;
+  max-width: 100px;
+  margin-top: 28px;
+}
+
+
+
+#play{
+  background: #FFF;
+}
+
+#pause{
+  background: #FFF;
+  display: none;
+}
+
+h3 {
+	font-family: 'Beauty and the Beast', serif;
+	font-size: 65px;
+}
+
+h2 {
+	font-size: 50px;
+	}
+
+
+iframe{
+  opacity: 0;
+  position: absolute;
+  right: 50px;
+}
+
+#player{
+  overflow: hidden;
+  position: relative;
+}
+
+.smallThumbnail{
+  width: 500%;
+  max-width: 150px;
+
+  cursor: pointer;
+}
+
+#extraArtRow{
+  margin: 0px 20px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
