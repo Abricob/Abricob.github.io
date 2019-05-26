@@ -1,0 +1,565 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>AHN</title><link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css?family=Raleway:600,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; padding-bottom: 70px; overflow-x: visible; }
+.first-line-indent #write div, .first-line-indent #write li, .first-line-indent #write p { text-indent: 2em; }
+.first-line-indent #write div :not(p):not(div), .first-line-indent #write div.md-htmlblock-container, .first-line-indent #write p *, .first-line-indent pre { text-indent: 0px; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
+@include-when-export url(https://fonts.googleapis.com/css?family=Raleway:600,400&subset=latin,latin-ext);
+
+@charset "UTF-8";
+@font-face {
+	font-family: 'TeXGyreAdventor';
+	font-style: normal;
+	font-weight: normal;
+	src: url(file:///Users/mayeulledore/Library/Application%20Support/abnerworks.Typora/themes/gothic/texgyreadventor-regular.otf);
+}
+@font-face {
+	font-family: 'TeXGyreAdventor';
+	font-style: normal;
+	font-weight: bold;
+	src: url(file:///Users/mayeulledore/Library/Application%20Support/abnerworks.Typora/themes/gothic/texgyreadventor-bold.otf);
+}
+@font-face {
+	font-family: 'TeXGyreAdventor';
+	font-style: italic;
+	font-weight: normal;
+	src: url(file:///Users/mayeulledore/Library/Application%20Support/abnerworks.Typora/themes/gothic/texgyreadventor-italic.otf);
+}
+@font-face {
+	font-family: 'TeXGyreAdventor';
+	font-style: italic;
+	font-weight: bold;
+	src: url(file:///Users/mayeulledore/Library/Application%20Support/abnerworks.Typora/themes/gothic/texgyreadventor-bolditalic.otf);
+}
+
+:root {
+	--window-border: none;
+	--typora-center-window-title: true;
+	--active-file-bg-color: #f3f3f3;
+	--bg-color: #fcfcfc;
+	--control-text-color: #777;
+}
+
+.mac-seamless-mode #typora-sidebar {
+	top: var(--mac-title-bar-height);
+	padding-top: 0;
+	height: auto;
+}
+
+html,
+body,
+#write{
+	background: #fcfcfc;
+	background: var(--bg-color);
+	font-family: 'TeXGyreAdventor', "Century Gothic", 'Yu Gothic', 'Raleway', "STHeiti", sans-serif;
+	font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #111;
+	font-family: 'TeXGyreAdventor', "Century Gothic", 'Yu Gothic', 'Ubuntu', "STHeiti", sans-serif;
+}
+
+html {
+	font-size:16px;
+}
+
+#write {
+	max-width: 914px;
+	text-align: justify;
+}
+
+#write>h1:first-child {
+	margin-top: 2.75rem;
+}
+#write>h2:first-child {
+	margin-top: 1.75rem;
+}
+#write>h3:first-child {
+	margin-top: 1rem;
+}
+#write>h4:first-child {
+	margin-top: 0.5rem;
+}
+h1 {
+	font-weight: normal;
+	line-height: 4rem;
+	margin: 0 0 1.75rem;
+	padding: 20px 30px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 4rem;
+}
+h2 {
+	font-weight: normal;
+	line-height: 3rem;
+	margin: 0 0 1.9375rem;
+	padding: 0 30px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 3rem
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-weight: normal;
+}
+h5 {
+	font-size: 1.125rem;
+	font-weight: normal;
+}
+h6 {
+	font-size: 1rem;
+	font-weight: bold;
+}
+p {
+	color: #111;
+	font-size: 1rem;
+	line-height: 1.75rem;
+	margin: 0 0 1.25rem;
+}
+#write>h3.md-focus:before {
+	left: -1.875rem;
+	top: 0.5rem;
+	padding: 2px;
+}
+#write>h4.md-focus:before {
+	left: -1.875rem;
+	top: 0.3125rem;
+	padding: 2px;
+}
+#write>h5.md-focus:before {
+	left: -1.875rem;
+	top: 0.25rem;
+	padding: 2px;
+}
+#write>h6.md-focus:before {
+	left: -1.875rem;
+	top: .125rem;
+	padding: 2px;
+}
+/*@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before {
+		top: 1px;
+	}
+	p {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}*/
+@media screen and (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.250rem;
+	}
+	.h5,
+	h5 {
+		font-size: 1.150rem;
+	}
+	.h6,
+	h6 {
+		font-size: 1rem;
+	}
+}
+a,
+.md-def-url {
+	color: #990000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+table {
+	margin-bottom: 20px
+}
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.25rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+table th {
+	font-weight: bold
+}
+table thead th {
+	vertical-align: bottom
+}
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
+}
+table tbody+tbody {
+	border-top: 2px solid #ddd
+}
+code, .md-fences {
+	padding: .5em;
+	/*background: #f0f0f0;*/
+	border: 1px solid #ccc;
+	padding: .1em;
+	font-size: 0.9em;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+.md-fences {
+	margin: 0 0 20px;
+	font-size: 1em;
+	padding: 0.3em 1em;
+  	padding-top: 0.4em;
+}
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:2.125rem;
+}
+
+.task-list-item input {
+	top: 3px;
+}
+
+.md-task-list-item input {
+	margin-left: -1.5em;
+}
+
+.task-list-item input:before {
+	content: "";
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid gray;
+	background-color: #fdfdfd;
+	margin-left: 0;
+	-webkit-appearance: none;
+	margin-top: -1rem;
+}
+
+.typora-node .task-list-item input:before {
+	top: 0.3ex;
+	position: absolute;
+}
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+	content: '\25FC';
+	/*◘*/
+	font-size: 0.8125rem;
+	line-height: 0.9375rem;
+}
+
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+    	margin-top: -0.2rem;
+    }
+
+    .task-list-item input:checked:before,
+	.task-list-item input[checked]:before {
+		margin-top: -0.2rem;
+	}
+}
+
+blockquote {
+	margin: 0 0 1.11111rem;
+	padding: 0.5rem 1.11111rem 0 1.05556rem;
+	border-left: 1px solid gray;
+}
+blockquote,
+blockquote p {
+	line-height: 1.6;
+	color: #6f6f6f;
+}
+#write pre.md-meta-block {
+	min-height: 30px;
+	background: #f8f8f8;
+	padding: 1.5em;
+	font-weight: 300;
+	font-size: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 3em;
+    margin-top: -1.5em;
+	color: #999;
+	
+	width: 100vw;
+	max-width: calc(100% + 60px);
+	margin-left: -30px;
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+}
+.MathJax_Display {
+	font-size: 0.9em;
+	margin-top: 0.5em;
+	margin-bottom: 0;
+}
+p.mathjax-block,
+.mathjax-block {
+	padding-bottom: 0;
+}
+.mathjax-block>.code-tooltip {
+	bottom: 5px;
+	box-shadow: none;
+}
+.md-image>.md-meta {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.md-image>img {
+	margin-top: 2px;
+}
+.md-image>.md-meta:first-of-type:before {
+	padding-left: 4px;
+}
+
+#typora-source {
+	color: #555;
+}
+
+/** ui for windows **/
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
+}
+
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
+}
+
+#md-notification:before {
+	top: 14px;
+}
+
+#md-notification {
+	background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+	border: 1px solid #ccc;
+}
+
+#typora-sidebar {
+	box-shadow: none;
+}
+
+.file-list-item ,
+.show-folder-name .file-list-item {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	line-height: 20px;
+}
+
+.file-list-item-summary {
+	height: 40px;
+	line-height: 20px;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export first-line-indent' >
+<div  id='write'  class = 'is-mac'><h2><a name='header-n16' class='md-header-anchor '></a>Mayeul Ledoré</h2><h1><a name='header-n432' class='md-header-anchor '></a>Dossier de demande du STATUT AHN </h1><h3><a name='header-n8' class='md-header-anchor '></a><u>Développement et recherche personnelle :</u></h3><p>Je suis actuellement dans une démarche créative quotidienne ayant pour but une recherche intensive de connaissances, de questionnements et de réponses. Cette démarche se traduit par un 365-everyday challenge ayant pour but de créer une oeuvre chaque jour en ne tombant jamais dans la réplication/non créativité/habitude. C&#39;est un défi inspiré par l&#39;artiste Beeple.</p><p>Tout est consultable sur ma galerie instagram : <a href='https://www.instagram.com/abricobabricob/' target='_blank' class='url'>https://www.instagram.com/abricobabricob/</a></p><p>Je découpe ma pratique graphique en 3 parties :</p><h5><a name='header-n53' class='md-header-anchor '></a><strong>L&#39;Exploration de l&#39;espace latent</strong>. </h5><p>J&#39;entends par là l&#39;étude de l&#39;art par intelligence artificielle. Les problématiques et enjeux sont multiples autour de cette branche nouvelle d&#39;art numérique. Il existe différentes techniques pour collaborer avec la machine que j&#39;utilise, et d&#39;autres que je développe. Mon objectif est simple, développer cette branche inscrite dans un tout nouveau courant que je nomme <strong>latentisme</strong>. La sensibilité peut-elle être codée ? Les machines peuvent réellement posséder une forme de sensibilité ?</p><h4><a name='header-n59' class='md-header-anchor '></a>“Computers are useless. They can only give answers.” <em>Picasso (1881 - 1973)</em></h4><p>Cette citation de Picasso est compréhensible remise dans le contexte technologique de l&#39;époque. Mais il n&#39;avait pas connaissance, par exemple, des méthodes de convergence par réseaux de neurones. Voici par exemple la formule d&#39;apprentissage collaboratifs de deux réseaux de neurones (un générateur et un discriminateur dans l&#39;architecture GAN). </p><p><img src="img/formuleblack.png" style="height:35px" /></p><p>Et, de cette formule, on peut générer de nombreuses images à l&#39;aide de données d&#39;entrainement. Ensuite, après de nombreux processus, on peut obtenir quelque chose d&#39;intéressant, que l&#39;on peut qualifier d&#39;&quot;oeuvres&quot;. Voici donc quelques exemples de mes oeuvres créées par ce processus :</p><p><img src="img/2019-05-25 19.59.38 2051745777252520228_4939430103.jpg" style="height:200px" /></p><h3><a name='header-n31' class='md-header-anchor '></a><center>Vésanie Extériorisée</center></h3><p>&nbsp;</p><p><img src="img/2019-05-24 23.47.51 2051135869934999537_4939430103.jpg" style="height:200px" /></p><h3><a name='header-n36' class='md-header-anchor '></a><center>Illumination de la perception</center></h3><p>&nbsp;</p><p><img src="img/2019-02-21 19.17.22 1984350558865079292_4939430103.jpg" style="height:200px" /></p><h3><a name='header-n449' class='md-header-anchor '></a><center>L&#39;Homme contemplant l&#39;Artistique Machine</center></h3><p>&nbsp;</p><p>Mais on peut aussi imaginer une autre utilisation de l&#39;intelligence artificielle. Les possibilités sont multiples. Un autre exemple est le transfert stylistique. L&#39;implémentation est différente et demande ici une image d&#39;entrée (considérons &quot;La nuit étoilée&quot; de Vincent Van Gogh), une image d&#39;entrainement (orange avec un certain relief). Puis on peut appliquer le style de cette dernière sur l&#39;oeuvre. Voici un résultat possible :</p><p><img src="img/2019-03-09 22.31.46 1996044818685584158_4939430103.jpg" style="height:200px" /></p><h3><a name='header-n41' class='md-header-anchor '></a><center>Post impressionnisme machine</center></h3><p><em>Ainsi, l&#39;obtention d&#39;un statut AHN peut être déja une brique supplémentaire pour ouvrir certaines portes. L&#39;objectif à court terme est d&#39;aller encore plus loin dans la conception de tels systèmes, à moyen terme ce serait plutôt d&#39;exposer certaines oeuvres dans un cadre de sensibilisation, à long terme, ce serait d&#39;expliquer pourquoi pas dans une conférence les différentes méthodes de travail que j&#39;exerce mais aussi les problématiques que mes expérimentations m&#39;ont amené à découvrir.</em></p><h5><a name='header-n93' class='md-header-anchor '></a><strong>La 3ème dimension.</strong> </h5><p>C&#39;est l&#39;élaboration d&#39;un univers créé en 3D. De nombreux logiciels sont combinés pour arriver à mes fins. J&#39;ai choisi cette technique graphique pour créer mon univers car elle apporte de nombreuses libertés dans la création. On peut par exemple obtenir un niveau de détail impossible sur une simple peinture, des éclairages calculés de façon réaliste ou non, une possibilité de sculpter tous ses personnages/objets. Il y a la possibilité d&#39;animer aussi. Bref, dans l&#39;ère du numérique, il m&#39;a paru pertinent de choisir les techniques graphiques les plus modernes pour exploiter au mieux ma créativité. Voici quelques oeuvres :</p><p>&nbsp;</p><p><img src="img/2018-10-26 12.00.32 1898576958061752695_4939430103.jpg" style="height:200px" /></p><h3><a name='header-n106' class='md-header-anchor '></a><center>Moony et les poussières d&#39;étoiles</center></h3><p>&nbsp;</p><p><img src="img/2019-02-05 14.31.33 1972610291531332741_4939430103.jpg" style="height:200px" /></p><h3><a name='header-n120' class='md-header-anchor '></a><center>Synthèse géométrique</center></h3><p>&nbsp;</p><p><img src="img/2019-02-19 18.22.46 1982873531054289763_4939430103.jpg" style="height:400px" /></p><h3><a name='header-n134' class='md-header-anchor '></a><center>Dualité de l&#39;intelligence machine</center></h3><p><em>De nombreux objectifs de ce côté là, à court terme, il faut que je travaille ma technique dans la connaissance des logiciels pour aller encore plus loin dans la création. A moyen terme, c&#39;est d&#39;animer en utilisant un setup d&#39;ordinateur plus puissant car c&#39;est impossible avec ma configuration actuelle d&#39;envisager créer des petits films 3D. A long terme, ce sont des projets d&#39;installations.</em></p><h5><a name='header-n145' class='md-header-anchor '></a><strong>L&#39;image, une peinture déformable </strong>. </h5><p>J&#39;utilise très souvent la photographie pour exprimer une idée. Je peux donc les combiner pour exprimer un message, véhiculer une sensation. Voici quelques une de mes oeuvres à ce propos :</p><p><img src="img/2018-11-25 12.01.17 1920350813478257144_4939430103.jpg" style="height:400px" /></p><h3><a name='header-n168' class='md-header-anchor '></a><center>Perspective émotionelle sur regard abstrait</center></h3><p>&nbsp;</p><p><img src="img/2018-12-08 11.37.08 1929760736423251442_4939430103.jpg" style="height:400px" /></p><h3><a name='header-n179' class='md-header-anchor '></a><center>Manipulation (XXI)</center></h3><p>&nbsp;</p><p><img src="img/2019-02-10 10.43.37 1976119447945032217_4939430103.jpg" style="height:400px" /></p><h3><a name='header-n191' class='md-header-anchor '></a><center>Départ 1995 - Sang</center></h3><p>La création est souvent portée sur la nature des images, la méthode d&#39;association et la justesse du message. J&#39;essaye aussi de travailler sur différentes palettes de couleur et sur le grain/texture de l&#39;image. L&#39;idée est toujours de considérer le média &quot;image&quot; comme la matière première d&#39;un tableau. </p><p>J&#39;ai décidé d&#39;aller plus loin dans cette direction et considérer le média image jusqu&#39;à sa construction et modifier sa nature (jusqu&#39;à l&#39;échelle de l&#39;encodage, du bit). Ainsi, je peux vraiment détruire, éclater l&#39;image pour  la sortir complètement de sa signification initiale et l&#39;utiliser à ma guise. Cette pratique s&#39;intègre dans la branche du <strong>glitch-art</strong>. Voici quelques exemples à ce propos :</p><p><img src="img/2019-05-06 17.18.20 2037893853729666437_4939430103.jpg" style="height:300px" /></p><h3><a name='header-n209' class='md-header-anchor '></a><center>Un Sentiment de Plénitude</center></h3><p>&nbsp;</p><p><img src="img/2019-03-21 20.34.19 2004683012016619739_4939430103.jpg" style="height:400px" /></p><h3><a name='header-n227' class='md-header-anchor '></a><center>Amazonie datamoshée</center></h3><p><em>L&#39;objectif est de passer sur des formats vidéos et d&#39;intégrer ces techniques sur des installations temps réel.</em></p><h3><a name='header-n232' class='md-header-anchor '></a><u>Développement communautaire :</u></h3><p>Il y a deux ans, je me suis lancé dans les arts graphiques et j&#39;ai commencé par la création de <strong>fractales</strong>. J&#39;ai donc généré de nombreuses oeuvres basées sur des objets mathématiques infinis (qu&#39;on peut d&#39;ailleurs retrouver dans la nature parfois). En voici quelques unes  :</p><p> <img src="/Users/mayeulledore/Pictures/4K Stogram/fractaldesigners/2018-11-26 20.49.46 1921341580460702504_7319335780.jpg" style="height:350px" /></p><h5><a name='header-n1307' class='md-header-anchor '></a><center>Gravitation</center></h5><p>&nbsp;</p><p> <img src="/Users/mayeulledore/Pictures/4K Stogram/fractaldesigners/2018-09-07 20.44.02 1863326441304035812_7319335780.jpg" style="height:350px" /></p><h5><a name='header-n1316' class='md-header-anchor '></a><center>Hippocampe</center></h5><p>&nbsp;</p><p> <img src="/Users/mayeulledore/Pictures/4K Stogram/fractaldesigners/2018-08-22 20.22.15 1851719061416123178_7319335780.jpg" style="height:350px" /></p><h5><a name='header-n1322' class='md-header-anchor '></a><center>Spirales dorées</center></h5><p>&nbsp;</p><p>J&#39;ai décidé d&#39;aller plus loin et de lancer un projet de développement d&#39;une communauté d&#39;artistes autour cette catégorie d&#39;art numérique appelé l&#39;art fractal. Il serait trop long d&#39;expliciter toutes les caractéristiques de cette branche. Elle est peu pratiquée et peu reconnue. Partant de ce constat, j&#39;ai trouvé pertinent de créer la FDC (Fractal Designers Community). Cette démarche est inspiré du français MHSMax qui a créé la MDC (Motion Designers Community) qui est devenue une plateforme de référence dans le monde du Motion Design.</p><p>La galerie de la communauté est disponible ici : <a href='https://www.instagram.com/fractaldesigners/' target='_blank' class='url'>https://www.instagram.com/fractaldesigners/</a> </p><p>Petit à petit, des artistes débutants ou professionnels pratiquant cette discipline artistique s&#39;ajoutent et peuvent soumettre leurs travaux pour plus de visibilité sur les réseaux sociaux. Etant administrateur de cette galerie et du groupe d&#39;entraide Facebook, je selectionne les images que je publie dans la galerie et je reponds aux messages de demande d&#39;aide.</p><center>Voici une selection d'artistes de la communauté :</center>						<p><strong><center>Bpparrot</strong></center></p><p> <img src="img/2019-04-22 22.43.20 2027910571399539690_7319335780.jpg" style="height:200px" /></p><p>&nbsp;</p><p><strong><center>Tao.Art</strong></center></p><p> <img src="img/2019-03-07 00.40.44 1993935402524017146_7319335780.jpg" style="height:200px" /></p><p>&nbsp;</p><p><strong><center>Giembe3D</strong></center></p><p> <img src="img/2019-02-25 22.54.17 1987358845479227718_7319335780.jpg" style="height:200px" /></p><p> <center>Voici les oeuvres de l&#39;année dernière des différents artistes :</center></p><p><img src="img/2019-03-24 22.03.23 2006902171790792540_7319335780.jpg" style="height:500px" /></p><p><em>Les objectifs sont nombreux, à court terme, c&#39;est continuer à faire vivre cette dynamique de groupe qui existe, à moyen terme, c&#39;est de tourner des vidéos de tutoriels sur YouTube pour ceux qui veulent apprendre à créer des fractales, à long terme, c&#39;est d&#39;organiser des meet-ups entres passionnés de cette branche artistiques et apporter toute une dimension humaine à ce projet</em>.</p><h3><a name='header-n313' class='md-header-anchor '></a><u>Collaborations :</u></h3><p><u>Avec l&#39;artiste <strong>Axyom</strong> (Valence puis Montréal):</u></p><p>Nous avons pu expérimenter dans différents lieux des installations de vidéoprojection en temps réel en synchronisation avec la musique. L&#39;idée était de donner une autre expérience aux auditeurs qu&#39;une simple interprétation de la musique en live. Cela a notamment eu lieu au bar du Lezart Café de Valence, dans la salle de l&#39;AVE de la Maison de l&#39;étudiant ainsi que en plein air dans les jardins de l&#39;Esisar. Voilà quelques affiches d&#39;évènements par exemple :</p><p><img src="img/1.jpg" style="height:250px" /> <img src="img/3.jpg" style="height:250px" /> <img src="img/2.jpg" style="height:250px" /></p><p>Je suis chargé de la création graphique et de la direction artistique sur tout son contenu. Il est consultable ici : <a href='https://axyom.bandcamp.com' target='_blank' class='url'>https://axyom.bandcamp.com</a></p><p><img src="img/mind.png" style="height:350px" /></p><h5><a name='header-n463' class='md-header-anchor '></a><center>Artwork du single &quot;Reward System&quot;</center></h5><p>Nous avons participé tous les deux aux entrepreneuriales en Drôme Ardêche (édition 2018). Notre projet était Fracture, c&#39;est un synthétiseur virtuel qui permet de créer du son et des visuels en même temps via une synthèse numérique innovante. Nous avons gagné un prix. (<a href='http://esisar.grenoble-inp.fr/fr/l-ecole/les-entrepreneuriales-2018' target='_blank' class='url'>http://esisar.grenoble-inp.fr/fr/l-ecole/les-entrepreneuriales-2018</a>). Voici quelques photos de l&#39;interface :</p><p><img src="img/fr.png" style="height:350px" /></p><p><u>Avec l&#39;<strong>ESAD</strong> de Valence :</u></p><p>Une collaboration entre ESAD et Esisar commence à se mettre en place depuis le début de 2019. Avec 3 autres élèves, nous avons été selectionnés pour participer à un workshop qui a abouti à la création d&#39;un projet d&#39;innovation disponible comme sujet de projet pour des élèves de l&#39;Esisar. De octobre à janvier 2019, avec un des élèves, nous avons créé le projet &quot;Idylle électromagnétique&quot; qui consiste à développer un boitier analysant en temps réel les caractéristiques des ondes électromagnétiques environnantes (celles des portables, de la radio, etc). Ensuite, le système pourra générer ou détruire une oeuvre en continu en fonction des données de ces ondes. Voici le schéma de l&#39;architecture du système :</p><p><img src="img/idy.png" style="height:550px" /></p><p>En mai 2019, je me suis porté volontaire pour participer à un workshop sur les Humanités Numériques d&#39;une élève de l&#39;ESAD dans le cadre de son projet de validation de son diplôme. Nous devions produire un démonstrateur sur deux jours sur la thématique &quot;Les entretiens dans la recherche&quot;. J&#39;ai travaillé en collaboration avec un élève en 5ème année de la filière design à l&#39;ESAD ainsi qu&#39;avec un élève en master 1 de Sociologie de l&#39;Innovation et Recompositions Sociales à l&#39;Université Grenoble Alpes. Nos reflexions ont aboutis à la conception d&#39;une platforme web nommée Inter.View qui permet de retranscrir les entretiens de manière pertinente en s&#39;enregistrant dans une base de données dynamique et consultable publiquement. Nous avons résumé le concept via une vidéo en stop-motion.</p><p>Le lien du mémoire : <a href='http://esad-gv.net/designgraphique/_archives_etudiants/DNSEP_2019/Laura_Piccolo/passerelles_annexe/' target='_blank' class='url'>http://esad-gv.net/designgraphique/_archives_etudiants/DNSEP_2019/Laura_Piccolo/passerelles_annexe/</a> </p><p><u>Avec l&#39;artiste <strong>Silence</strong> (Valence):</u></p><p>Nous avons participé au spectacle Arts &amp; Facs au théâtre de Valence pour l&#39;édition 2019. Silence avait enregistré des interviews et des sons d&#39;Amazonie et a composé une musique avec. Il avait aussi tourné de nombreux plans que j&#39;ai réutilisé pour créer un court métrage. J&#39;ai pu expérimenter des techniques de datamoshing et de glitch-art à l&#39;aide de code et de scripts.</p><p><img src="img/aff.jpg" style="height:250px" /></p><p>  <img src="img/data.jpg" style="height:400px" /></p><p>La vidéo est disponible sur YouTube : <a href='https://www.youtube.com/watch?v=XqYlToQrV8c' target='_blank' class='url'>https://www.youtube.com/watch?v=XqYlToQrV8c</a></p><p>Silence travaille actuellement sur un EP explicite sur les problèmes de déforestation en Amazonie. Je créé des visuels allant avec ses musiques qui sont basés sur la destruction du média. Le contenu est disponible sur à ce lien : <a href='https://soundcloud.com/noir_silence' target='_blank' class='url'>https://soundcloud.com/noir_silence</a></p><h3><a name='header-n429' class='md-header-anchor '></a><u>Conclusion :</u></h3><p>L&#39;écriture de ce dossier et la demande de renouvelement du statut est grandement motivé par les discussions que j&#39;ai pu avoir avec Sandrine Dusser. Je suis persuadé qu&#39;il est intéressant d&#39;avoir un statut prouvant académiquement mes pratiques artistiques chronophages. De plus, le statut Artiste de Haut Niveau peut avoir une incidence positive lorsque je vais démarcher des demandes de projets/collaborations. Les avantages du statut sont légion mais je peux difficilement profiter de tous dans le cadre de l&#39;Esisar au vue des aménagements possibles avec cette école. Cependant, c&#39;est une brique supplémentaire me donnant académiquement une crédibilité que j&#39;ai souvent besoin de justifier.</p><p>J&#39;ai obtenu le statut en 2017-2018 en liste 2 en précisant mes activités dans le domaine musical. </p><p>J&#39;ai eu un refus de renouvelement en 2018-2019. Je me sentais mal à l&#39;idée de devoir spécifier mes activités et mon travail dans un document. Je n&#39;ai donc pas completé entièrement le formulaire et je comprends la décision de la commission.</p><p>Cette année, j&#39;ai pris consience de l&#39;importance d&#39;exposer son travail et de multiplier les interactions d&#39;où ma démarche actuelle.</p><p>&nbsp;</p></div>
+</body>
+</html>
