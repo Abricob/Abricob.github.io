@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>DOSSIER AHN</title><link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Raleway:600,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --window-border: none; --typora-center-window-title: true; --active-file-bg-color: #f3f3f3; --bg-color: #fcfcfc; --control-text-color: #777; }
+.mac-seamless-mode #typora-sidebar { top: var(--mac-title-bar-height); padding-top: 0px; height: auto; }
+html, body, #write { background: rgb(252, 252, 252); font-family: TeXGyreAdventor, "Century Gothic", "Yu Gothic", Raleway, STHeiti, sans-serif; font-weight: 300; }
+h1, h2, h3, h4, h5, h6 { color: rgb(17, 17, 17); font-family: TeXGyreAdventor, "Century Gothic", "Yu Gothic", Ubuntu, STHeiti, sans-serif; }
+html { font-size: 16px; }
+#write { max-width: 914px; text-align: justify; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { font-weight: normal; line-height: 4rem; margin: 4rem 0px 1.75rem; padding: 20px 30px; text-align: center; text-transform: uppercase; }
+h2 { font-weight: normal; line-height: 3rem; margin: 3rem 0px 1.9375rem; padding: 0px 30px; text-align: center; text-transform: uppercase; }
+h3 { font-weight: normal; }
+h4 { font-weight: normal; }
+h5 { font-size: 1.125rem; font-weight: normal; }
+h6 { font-size: 1rem; font-weight: bold; }
+p { color: rgb(17, 17, 17); font-size: 1rem; line-height: 1.75rem; margin: 0px 0px 1.25rem; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+@media screen and (max-width: 48em) {
+  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
+  .h1, h1 { font-size: 2.827rem; }
+  .h2, h2 { font-size: 1.999rem; }
+  .h3, h3 { font-size: 1.413rem; }
+  .h4, h4 { font-size: 1.25rem; }
+  .h5, h5 { font-size: 1.15rem; }
+  .h6, h6 { font-size: 1rem; }
+}
+a, .md-def-url { color: rgb(153, 0, 0); text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+code, .md-fences { border: 1px solid rgb(204, 204, 204); padding: 0.1em; font-size: 0.9em; margin-left: 0.2em; margin-right: 0.2em; }
+.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 2.125rem; }
+.task-list-item input { top: 3px; }
+.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.8rem; }
+.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
+}
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
+blockquote, blockquote p { line-height: 1.6; color: rgb(111, 111, 111); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin-top: -1.5em; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left: 30px solid rgb(248, 248, 248); border-right: 30px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+#typora-sidebar { box-shadow: none; }
+.file-list-item, .show-folder-name .file-list-item { padding-top: 20px; padding-bottom: 20px; line-height: 20px; }
+.file-list-item-summary { height: 40px; line-height: 20px; }
+
+
+
+
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a><strong>DOSSIER DE DEMANDE DE STATUT AHN</strong></h1><p>&nbsp;</p><center><b>GRENOBLE INP ESISAR</b></center><center>Année 2019 - 2020</center><center>Antoine BERLIOZ</center><p>&nbsp;</p><p>&nbsp;</p><p><img src='Images\DSCF6003.jpg' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h2><a name='header-n10' class='md-header-anchor '></a>L&#39;inspiration</h2><p>Il y a trois ans, j&#39;ai participé à la création d&#39;une association de solidarité internationale nommée AKUU. Elle vise à préserver les richesses de la forêt amazonienne en mettant en place des projets basés sur le partage de connaissance, dans des villages en Amazonie. Et aussi, elle réalise différentes campagnes de sensibilisation en France notamment.  </p><p>L&#39;année dernière, j&#39;ai réalisé une année de césure pour la réalisation d&#39;un projet pilote, mené par l&#39;association, dans le village de Puerto Miguel en Amazonie péruvienne. Il s&#39;agissait d&#39;une expérience de vie riche, différente, aventureuse et surtout humaine. Humaine de part les échanges et le dialogue, de part la proximité que j&#39;ai eu avec les locaux, de part le partage de savoirs et de connaissances, de part le sens et l&#39;utilité du projet mais aussi de part les liens humains construits. </p><p>Cette dernière phrase, je pense, énumère bien les motivations qui me poussent à créer des œuvres artistiques. Pas seulement pour une beauté esthétique mais surtout pour la capacité à véhiculer une histoire, un message, un sens à portée humaine. </p><p>Mon nom d&#39;artiste est Silence. Dans un premier temps personnel, il évoquait un état d&#39;esprit, une incompréhension du monde et un ressenti d&#39;isolement. Aujourd&#39;hui, il comporte une dimension supplémentaire, relative à ceux à qui j&#39;adresse le travail artistique. Invitation à l&#39;ouverture, à la présence et la compréhension. Laissez vous envahir par l&#39;émotion, la réflexion viendra plus tard. </p><p><img src='Images\_MG_7178.jpg' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h2><a name='header-n18' class='md-header-anchor '></a>Le projet</h2><p>Le projet Silence intègre une dimension humaine. Un désir de partage et surtout de sensibilisation. Un appel à la bonté de l&#39;homme, au respect et à la conscience. Le projet est situé entre le reportage, le documentaire et la présentation, véhiculé à travers l&#39;art. Silence veut toucher l&#39;humain par l&#39;histoire et les sens, à travers notamment l&#39;ouïe et la vue. C&#39;est pour cela que le projet s&#39;inscrit dans l&#39;art audio-visuel.</p><p>Œuvre première du projet : Amazonas.</p><p><img src='Images\_MG_7021.jpg' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h3><a name='header-n23' class='md-header-anchor '></a>Amazonas</h3><p>L&#39;expérience vécue en Amazonie fut riche, bien plus que n&#39;importe quelle année auparavant. C&#39;est de par les rencontres et les discussions notamment que j&#39;ai pris conscience de l&#39;ampleur de la situation. Une Amazonie qui se meure, détruite par un système inadapté mis en place à l&#39;échelle mondiale et dont les conséquences sont alarmantes.</p><p>Bien que les informations sont existantes, bien que les documentaires existent, bien que les organisations et ONG agissent, peu nombreux sont les impacts positifs. Peu nombreux sont les changements et toujours présentes sont les problématiques. </p><p>Alors ? Que reste-t-il ? L&#39;art ?</p><p>L&#39;art est pour moi vecteur d&#39;émotion, d&#39;histoire et permet de toucher profondément l&#39;humain. L&#39;utiliser, devient alors, une manière de partager une émotion et par conséquent de sensibiliser.</p><p><img src='Images\DSCF5337.jpg' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><h4><a name='header-n30' class='md-header-anchor '></a>A - Documentation </h4><p>Le projet Amazonas à commencé en Amazonie par une phase de documentation. Apprendre des rencontres, des locaux et du vivant. Il s&#39;agit du voyage qui amène à comprendre la situation. A travers l&#39;enregistrement audio et visuel, je constitue la base même de l&#39;expression de œuvre par la suite. </p><p>&nbsp;</p><ul><li>Enregistrement audio : interview</li></ul><p>Sur place, j&#39;ai réalisé des interviews enregistrés de péruviens vivants dans la région du Loreto au Pérou. J&#39;ai échangé avec eux sur différentes thématiques, à savoir le climat, la biodiversité, la déforestation, les ressources naturelles, la pollution, l&#39;énergie, l&#39;artisanat et le tourisme. L&#39;objectif était de comprendre leurs points de vue mais je pense surtout de leur permettre de s&#39;exprimer. </p><div>
+    <center>
+     	<img alt="" src="Images\_MG_7500.jpg" width="210" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\_MG_7914.jpg" width="210" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\_MG_7885.jpg" width="210" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\_MG_6566.jpg" width="210" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><p>&nbsp;</p><div>
+    <center>
+     	<img alt="" src="Images\_MG_7862.jpg" width="210" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\_MG_6991.jpg" width="210" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\_MG_7911.jpg" width="210" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\_MG_6993.jpg" width="210" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><div>
+    <center>
+		<figcaption>Casilda, Orlando, Nixon, Kelly, Abraham, Geiner, Angel et Arnaldo
+    </figcaption></center>
+<!--\div--></div><p>&nbsp;</p><ul><li>Enregistrement audio : son</li></ul><p>Le son est pour moi une constituante majeure de œuvre et il est important de récupérer un panel important de ceux ci. La nature des sons est grande. J&#39;ai enregistré des sons de jungle dans plusieurs milieux et à plusieurs moments de l&#39;année. Son de jungle, d&#39;oiseau, de pluie pour les sons de nature. Mais aussi des bruits de moteur, groupe électrogène et autre outils techniques. L&#39;ensemble de ces sons constitue une partie de l&#39;Amazonie, une partie du milieu, à la fois naturel et lié à des activités humaines.</p><div>
+    <center>
+     	<img alt="" src="Images\DSCF5631.jpg" width="424" onerror="this.style.display = 'none';">
+    	<img alt="" src="Images\DSCF5820.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><p>&nbsp;</p><div>
+    <center>
+     	<img alt="" src="Images\DSCF5816.jpg" width="849.9" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><div>
+    <center>
+		<figcaption>Reportage sur la beauté de l'Amazonie
+    </figcaption></center>
+<!--\div--></div><p>&nbsp;</p><ul><li>Photographie</li></ul><p>Aussi, toujours dans un soucis de recherche d&#39;information ou de matière comme support de travail, j&#39;ai photographié l&#39;Amazonie comme je l&#39;ai perçue. Ce milieu est à la fois un lieu de vie riche et dense de part la quantité incroyable d&#39;espèces d&#39;animaux et de végétaux qui cohabitent mais il aussi très contrasté par des activités ou pratiques destructrices. J&#39;ai pu photographier la beauté de l&#39;Amazonie mais aussi réaliser quelques reportages. Sur la déforestation avec Romoro, sur la palme nommée chambira avec Teddy, dont utilise la fibre pour faire de l&#39;artisanat, sur la déforestation liée à des projets d&#39;urbanisation et de développement d&#39;infrastructure entre Nauta et Iquitos et j&#39;ai aussi pu constater les dégâts causés par la culture intensive du cacao à Tamshiyacu. </p><p>&nbsp;</p><div>
+    <center>
+     	<img alt="" src="Images\_MG_7021.jpg" width="424" onerror="this.style.display = 'none';">
+    	<img alt="" src="Images\_MG_7026.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><p>&nbsp;</p><div>
+    <center>
+     	<img alt="" src="Images\_MG_7175.jpg" width="424" onerror="this.style.display = 'none';">
+    	<img alt="" src="Images\_MG_7178.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><div>
+    <center>
+		<figcaption>Reportage sur la beauté de l'Amazonie
+    </figcaption></center>
+<!--\div--></div><p>&nbsp;</p><ul><li>Vidéos</li></ul><p>Enfin, les vidéos font parties des médias importants que j&#39;utilise dans la création de œuvre. Dans les mêmes occasions pour pour la photographie, j&#39;ai réalisé des captures vidéos qui servent de support à la création.</p><p>&nbsp;</p><div>
+    <center>
+     	<img alt="" src="Images\_MG_6955.jpg" width="424" onerror="this.style.display = 'none';">
+    	<img alt="" src="Images\_MG_6960.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><p>&nbsp;</p> <div>
+    <center>
+     	<img alt="" src="Images\_MG_7260.jpg" width="424" onerror="this.style.display = 'none';">
+    	<img alt="" src="Images\_MG_7265.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><div>
+    <center>
+		<figcaption>Reportage sur le travail de la coupe de bois local
+    </figcaption></center>
+<!--\div--></div><p>&nbsp;</p><p>&nbsp;</p><h4><a name='header-n82' class='md-header-anchor '></a>B - Construction</h4><p>De retour en France, j&#39;ai rassemblé l&#39;ensembles des médias qui constituent mon support de travail pour ensuite commencer la construction de œuvre artistique. </p><p>Aujourd&#39;hui, Amazonas est principalement constituée de musiques et de photographies avec une partie centrale comme court métrage.</p><ul><li>Musique </li></ul><p>Une des envies de création suite au retour fut celle musicale. Je me suis lancé dans la réalisation d&#39;un EP proposant quelques morceaux au travers desquels je partage mon expérience. Il s&#39;agit des musiques électroniques structurées et rythmées par les sons enregistrés durant mon séjour en Amazonie. J&#39;y intègre donc les échanges, les interviews, les bruitages que j&#39;ai pu capturer, rendant la musique cohérente et vivante. L&#39;objectif étant la transmission d&#39;un savoir, d&#39;une expérience à travers une histoire musicale.  </p><p>Les musiques sont crées avec des synthétiseurs, des séquenceurs et instruments modulaires que j&#39;enregistre dans un logiciel pour ensuite faire du post-processing (mixage et mastering).</p><p>Les premiers morceaux de l&#39;album sont disponibles ici : <a href='https://soundcloud.com/noir_silence' target='_blank' class='url'>https://soundcloud.com/noir_silence</a></p><p>Le premier morceau Datazonie a été diffusé sur la l&#39;émission radio &quot;Club Sandwich Radiophonique&quot; à Grenoble  le lundi 1er avril 2019, lors d&#39;une interview de Yoann Rey-Ricord, président de l&#39;association AKUU sur le thème de l&#39;Amazonie.</p><p><img src='Images\Expo semaine culture 2.JPG' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><ul><li>Photographie</li></ul><p>Comme je souhaite partager au mieux la situation que j&#39;ai constatée en Amazonie, je construis œuvre Amazonas en plusieurs dimensions. L&#39;aspect visuel est très important car il est le sens le plus utilisé dans notre société et permet de véhiculer ce que je souhaite exprimer. J&#39;ai réalisé des expositions photographiques que j&#39;ai pu présenter à plusieurs occasions. Elles regroupent à la fois des paysages gorgées de vie, où règnent la paix et la sensation de plénitude,  des portraits d&#39;hommes et de femmes locaux qui m&#39;ont partagés des connaissances, des scènes de travail et de vie, des reportages sur la déforestation ou sur activités humaines aux conséquences majeures sur l&#39;environnement.</p><p>J&#39;ai pu exposer ces photos lors d&#39;évènements comme le CLIMAX 2018 en septembre à Bordeaux. Aussi, dans le cadre d&#39;un projet de sensibilisation, j&#39;ai collaboré avec l&#39;association AKUU pour la réalisation de l&#39;exposition &quot;Le temps d&#39;un rêve&quot;. Cette exposition en réalité augmentée a été présentée lors de la 13e édition du festival culturel interuniversitaire de Grenoble en mars 2019. Il s&#39;agissait ici pour moi de proposer un ensemble photographique cohérent qui présentait différents aspect de l&#39;Amazonie. A savoir : sa beauté, ses fragilités, la culture, l&#39;humain et les problématiques liées aux activités humaines. Les 25 photos choisies ont été exposées en format A0 sur le campus de Grenoble.</p><p>Je vous propose de visionner cette vidéo de présentation de l&#39;exposition :  <a href='https://www.youtube.com/watch?v=gHu9EebMLZQ&feature=youtu.be' target='_blank' class='url'>https://www.youtube.com/watch?v=gHu9EebMLZQ&feature=youtu.be</a></p><p>Quelques photographie de œuvre sont présentes sur ma page instagram : <a href='https://www.instagram.com/unnoirsilence/' target='_blank' class='url'>https://www.instagram.com/unnoirsilence/</a></p><p>&nbsp;</p><p><img src='Images\Expo semaine culture.JPG' alt='' referrerPolicy='no-referrer' /></p><p>&nbsp;</p><ul><li>Court métrage</li></ul><p>Datazonie, est aussi le nom du court métrage artistique, réalisé en collaboration avec l&#39;artiste Abricob. Il présente la situation de l&#39;Amazonie telle que je l&#39;ai perçue. Une situation qui ne cesse de s&#39;aggraver. Touchées directement par la pollution, le déséquilibre climatique et la surexploitation des ressources, les espèces végétales et animales disparaissent peu à peu. En conséquence, chute de la biodiversité et des populations locales humaines devenues impuissantes et privées de leurs droits naturels. Pourtant, face à ce constat  et alarmées par de nombreux scientifiques, nos sociétés sont inactives, presque ignorantes. </p><p>L&#39;idée de ce projet était de partager un ressenti, une expérience vécue pour présenter la situation. Ce projet s&#39;inscrit à la suite d&#39;une année vécu en Amazonie pour la réalisation d&#39;un projet de solidarité internationale avec l&#39;association AKUU entre 2017 et 2018. Cette œuvre est issue de la collaboration avec l&#39;artiste Abricob. L&#39;ensemble des images et vidéos ont été tournées en Amazonie pendant mon expérience sur place. Pour la partie musicale, des enregistrements audios ont servi de base de la construction sonore, donnant une signification plus vivante et cohérente à œuvre.</p><p>Datazonie à été projettée lors de l&#39;évènement Arts &amp; Facs 2019 au théâtre de la ville de Valence.</p><p>Le court métrage est disponible sur ma chaîne youtube : <a href='https://www.youtube.com/watch?v=XqYlToQrV8c' target='_blank' class='url'>https://www.youtube.com/watch?v=XqYlToQrV8c</a></p><p>&nbsp;</p><div>
+    <center>
+    	<img alt="" src="Images\_MG_6725.jpg" width="424" onerror="this.style.display = 'none';">
+        <img alt="" src="Images\DSCF5598.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><p>&nbsp;</p><div>
+    <center>
+		<img alt="" src="Images\DSCF5623-Panorama.jpg" width="424" onerror="this.style.display = 'none';">
+    	<img alt="" src="Images\_MG_7639.jpg" width="424" onerror="this.style.display = 'none';">
+    </center>
+<!--\div--></div><div>
+    <center>
+		<figcaption>Reportage sur les problématiques de la région
+    </figcaption></center>
+<!--\div--></div><p>&nbsp;</p><h4><a name='header-n120' class='md-header-anchor '></a>C - Suite</h4><p>J&#39;ai commencé à travailler sur œuvre Amazonas à mon retour du Pérou en été 2018. J&#39;ai principalement travaillé sur des photographies et des compositions musicales. Cependant, le travail que je souhaite fournir n&#39;est pas fini. Les morceaux de l&#39;album ne sont pas encore tous finis et de futurs travaux audio-visuels sont à l&#39;étude.</p><p>&nbsp;</p><h2><a name='header-n123' class='md-header-anchor '></a>Les futures œuvres</h2><p>Amazonas est la première œuvre du projet Silence. Elle est centrée sur l&#39;expérience de vie que j&#39;ai eu en Amazonie et que je partage avec l&#39;utilisation des médias audios et visuels. Aujourd&#39;hui cette œuvre manque d&#39;homogénéité par rapport à l&#39;ensemble des productions réalisées. Ceci étant, cette première me permet de mieux définir les objectifs du projet et me permet de travailler la technique et la qualité de production.</p><p>Suite à l&#39;œuvre Amazonas, d&#39;autres projets humaniste émergent, incluant toujours une notion de reportage alternatif, de partage de connaissance véhiculé par l&#39;art. Notamment, je vais partir en Colombie pour un semestre d&#39;échange universitaire qui amorcera le début d&#39;une autre œuvre sur une thématique de ce pays.</p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>
